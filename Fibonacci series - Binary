@@ -1,3 +1,9 @@
+Binary Representation - Fibonacci Series    
+--------------------skillrack PROGRAM ID -7988 --------------------
+The program must accept a positive integer N as the input. The program must consider the
+first N numbers in the Fibonacci series. For each number M in the Fibonacci series, the
+program must print the binary representation of M as the output.
+
 INPUT :
 6
 OUTPUT : 
