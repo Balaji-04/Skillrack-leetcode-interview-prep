@@ -1,0 +1,34 @@
+INPUT/OUTPUT:
+Key : -3
+Text : ABCD
+Cipher Text : XYZA
+
+INPUT/OUTPUT:
+Key : 4
+Text : abcd
+Cipher Text : efgh
+
+CODE :
+#include <string.h>
+#include <stdio.h>
+int main()
+{
+    char t[100];
+    int n;
+    printf("Key : ");
+    scanf("%d",&n);
+    printf("Text : ");
+    scanf("%s",t);
+    printf("Cipher Text : ");
+    for (int i=0;i<strlen(t);i++){
+        int x=t[i];
+        if (t[i]>=65 && t[i]<=90) x-=65;
+        else x-=97;
+        if (x+n < 0) x=x+26+n;
+        else x=(x+n)%26;
+        if (t[i]>=65 && t[i]<=90) x+=65;
+        else x+=97;
+        printf("%c",x);
+    }
+    return 0;
+}
