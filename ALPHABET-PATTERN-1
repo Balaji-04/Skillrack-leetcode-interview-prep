@@ -1,0 +1,53 @@
+PATTERN 1 :
+INPUT/OUTPUT : 
+6
+ABCDEFFEDCBA
+-EDCBAABCDE-
+--ABCDDCBA--
+---CBAABC---
+----ABBA----
+-----AA-----
+
+INPUT/OUTPUT :
+3
+ABCCBA
+-BAAB-
+--AA--
+
+CODE : 
+#include <stdio.h>
+
+int main() {
+    int n,tn;
+    scanf("%d",&n);
+    tn=n;
+    for (int i=0;i<n;i++){
+        for (int h=0;h<i;h++){
+            printf("-");
+        }
+        if(i%2==0){
+        int x;
+        for (x=0;x<tn;x++){
+            printf("%c",x+65);
+        }
+        for (x=x-1;x>=0;x--){
+            printf("%c",x+65);
+        }
+        }else{
+            int x;
+            for (x=tn-1;x>=0;x--){
+                printf("%c",x+65);
+            }
+            for (x=0;x<tn;x++){
+                printf("%c",x+65);
+            }
+        }
+        tn--;
+        for (int h=0;h<i;h++){
+            printf("-");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
