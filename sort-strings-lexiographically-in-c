@@ -1,0 +1,38 @@
+INPUT/OUTPUT : 
+5
+zebra
+rat
+ant
+bat
+cat 
+ant
+bat
+cat
+rat
+zebra
+
+CODE :
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char s[100][100],temp[100];
+    int n;
+    scanf("%d",&n);
+    for (int i=0;i<n;i++){
+        scanf("%s",s[i]);
+    }
+    for (int i=0;i<n;i++){
+        for (int j=0;j<n-1;j++){
+            if (s[i][0]<s[j][0]){
+                strcpy(temp,s[i]);
+                strcpy(s[i],s[j]);
+                strcpy(s[j],temp);
+            }
+        }
+    }
+    for (int i=0;i<n;i++){
+        printf("%s\n",s[i]);
+    }
+    return 0;
+}
