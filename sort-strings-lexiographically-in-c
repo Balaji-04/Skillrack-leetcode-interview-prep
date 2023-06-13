@@ -10,6 +10,16 @@ bat
 cat
 rat
 zebra
+INPUT/OUTPUT:
+3
+batman
+bat
+apple
+apple
+bat
+batman
+
+
 
 CODE :
 #include <stdio.h>
