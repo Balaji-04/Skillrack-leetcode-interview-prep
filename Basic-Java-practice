@@ -1,0 +1,61 @@
+public class Main
+{
+    byte a=101;
+    //method overloading - number of arguments
+    public void mul(int a, int b){
+        System.out.println(a*b);
+    }
+    public void mul(int a, int b, int c){
+        System.out.println(a*b*c);
+    }
+   
+    //method overloading - datatype
+    public void mul(int a, float b){
+        System.out.println(a*b);
+    }
+    public void mul(int a, float b, int c){
+        System.out.println(a*b*c);
+    }
+   
+    //static member func
+    public static void hai(){
+        System.out.println("Hello world");
+    }
+    //normal member func
+    public void hood(){
+        byte a=107;
+        System.out.println("good");
+    }
+    //returning expression
+    int add(int a,int b){
+        return a+b;
+    }
+    //Object AS return TYPE
+    public static Main sample(){
+        Main s = new Main();
+        System.out.println(s.a+101);
+        return s;
+    }
+public static void main(String[] args) {
+   //static member func call
+   hai();
+   //non static member function call
+   Main s=new Main();
+   s.hood();
+   //method overloading - number of arguments
+   s.mul(10,20);
+   s.mul(10,20,30);
+   
+   //method overloading - datatype
+   s.mul(10,10.11f);
+   s.mul(10,10.111f,20);
+   
+   //return statement
+   int x = s.add(10,20);
+   System.out.println(x);
+   //Printing global variable inside
+   System.out.println(s.a);
+   //object as return type
+   Main s1 = s.sample();
+}
+}
