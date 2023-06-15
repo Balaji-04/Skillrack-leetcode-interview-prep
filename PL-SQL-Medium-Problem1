@@ -1,0 +1,24 @@
+Create a PLSQL Program that allows the user to input the vehicle ID, number of adults, and number of children, and then calculates and displays the total fare 
+based on the given inputs.
+
+CODE: 
+DECLARE
+    VEHID VARCHAR2(10);
+    noa number(3);
+    noc number(3);
+FUNCTION CalculateFare (a in NUMBER, c IN number)
+RETURN NUMBER
+IS
+Total number(6):=0;
+BEGIN
+/*Assume Fare for Adult - 100 & Children - 50*/
+Total:=Total+(a*100);
+Total:=Total+(c*100);
+Return Total;
+End;
+BEgin
+VEHID:=:Enter_vehicle_ID;
+noa:=:Enter_No_of_Adults;
+noc:=:Enter_No_of_Children;
+dbms_output.put_line('Total fare is '||CalculateFare(noa,noc));
+END;
