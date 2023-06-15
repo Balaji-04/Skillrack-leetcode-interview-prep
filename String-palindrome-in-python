@@ -1,0 +1,17 @@
+INPUT/OUTPUT:
+enter a string: abbbbbaaaa
+NOT A PALINDROME
+
+INPUT/OUTPUT:
+enter a string: ABBA
+PALINDROME
+
+CODE:
+def isPalindrome(s):
+    return s == s[::-1]
+s = input("enter a string: ")
+ans = isPalindrome(s)
+if ans:
+    print("PALINDROME")
+else:
+    print("NOT A PALINDROME")
