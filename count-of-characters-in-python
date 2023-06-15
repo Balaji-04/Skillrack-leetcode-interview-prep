@@ -1,0 +1,23 @@
+INPUT/OUTPUT:
+AEIOUacdddd
+ENTER SPECIFIC CHARACTER: d
+No of vowels 6
+No of Words 1
+No of Specfic characters 4
+
+
+CODE:
+vowels=['a','e','i','o','u','A','E','I','O','U']
+s=input()
+sb=input("ENTER SPECIFIC CHARACTER: ")
+sc=0
+w=len(s.split())
+v=0
+for i in s:
+    if i in vowels:
+        v+=1
+    if i==sb:
+        sc+=1
+print("No of vowels",v)
+print("No of Words",w)
+print("No of Specfic characters",sc)
