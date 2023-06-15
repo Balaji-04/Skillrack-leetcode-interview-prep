@@ -1,3 +1,5 @@
+Write a python program to calculate & display the number of vowels,words and specific characters given as input in the STRING as output.
+
 INPUT/OUTPUT:
 AEIOUacdddd
 ENTER SPECIFIC CHARACTER: d
