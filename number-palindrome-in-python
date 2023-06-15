@@ -1,0 +1,21 @@
+INPUT/OUTPUT:
+Enter a number: 1011
+NOT A PALINDROME
+
+INPUT/OUTPUT:
+Enter a number: 1001
+PALINDROME
+
+CODE:
+s=int(input("Enter a number: "))
+b=s
+sum=0
+#reversing the number
+while(s>0):
+    a=s%10
+    sum=sum*10+a
+    s=s//10
+if(sum==b):
+    print("PALINDROME")
+else:
+    print("NOT A PALINDROME")
