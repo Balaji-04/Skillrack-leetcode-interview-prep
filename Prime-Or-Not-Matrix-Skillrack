@@ -1,0 +1,38 @@
+PRIME OR NOT MATRIX - SKILLRACK
+The program must accept an integer matrix of size RxC as the input For each integer in the matrix and the program must replace all
+the prime numbers by 1 and all the non prime numbers by 0. Then the program must print the modified matrix as the output.
+
+INPUT:
+2 3
+2 3 9
+6 8 3
+
+OUTPUT:
+1 1 0
+0 0 1
+
+CODE:
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+
+int m, n,temp, flag; 
+scanf("%d %d", &m, &n);
+
+for (int i=0;i<m;i++){ 
+    for (int j=0;j<n;j++){ 
+        scanf("%d", &temp); 
+        flag=0; 
+        for (int k=2; k<=(temp/2); k++)
+            { if(temp%k==0){ 
+                flag=1; 
+                break; 
+            }
+        }
+        if(flag==1) printf("0 "); else printf("1 ");
+    }
+    printf("\n");
+}
+
+}
