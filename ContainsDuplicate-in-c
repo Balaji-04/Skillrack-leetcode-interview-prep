@@ -28,7 +28,7 @@ Constraints:
 1 <= nums.length <= 105
 -109 <= nums[i] <= 109
 
-CODE IN C:
+CODE IN C:  //Traditional Bruteforce
 bool containsDuplicate(int* nums, int numsSize){
     for (int i=0;i<numsSize;i++){
         for (int j=i+1;j<numsSize;j++){
@@ -38,4 +38,21 @@ bool containsDuplicate(int* nums, int numsSize){
         }
     }
     return false;
+} // this doesnt pass an long testcase
+
+
+Solution:
+int cmpf (const void * a,const void * b){
+    return ( *(int*)a - *(int*)b );
 }
+bool containsDuplicate(int* nums, int numsSize){
+
+    qsort(nums,numsSize,sizeof(int),cmpf);
+    
+    for (int i=0;i<numsSize-1 ;i++){
+        if (nums[i] == nums[i+1]) return true;
+    }
+
+    return false;
+}
+
