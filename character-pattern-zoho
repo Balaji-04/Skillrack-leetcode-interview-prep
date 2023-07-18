@@ -1,0 +1,35 @@
+A pattern program asked in zoho.
+
+INPUT/OUTPUT:
+Input : a5b3z26
+aaaaabbbzzzzzzzzzzzzzzzzzzzzzzzzzz
+
+Input : Z6v3A2
+ZZZZZZvvvAA
+
+CODE:
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char s[100];
+    scanf("%s",s);
+    for (int i=0;i<strlen(s);i++){
+        if ((s[i]>='a' && s[i]<='z') || (s[i]>='A' && s[i]<='Z')){
+            int num = 0;
+            int si = i+1;
+            while (1){
+                if (isalpha(s[si]) || si>=strlen(s)) break;
+                int t = s[si] - 48;
+                num = (num*10) + t;
+                si++;
+            }
+            
+            for (int xi=0;xi<num;xi++)
+            printf("%c",s[i]);
+            
+            //printf("%d\n",num);
+        }
+    }
+}
